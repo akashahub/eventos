@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akasha Supremacia: Eventos exclusivos, imersões presenciais e retiros transformadores.">
     <title>AKASHA SUPREMACIA | Eventos Exclusivos</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -747,6 +748,7 @@
             font-size: 0.7rem;
             letter-spacing: 2px;
             transform: rotate(45deg);
+            z-index: 20;
         }
 
         .event-card.past:hover {
@@ -770,19 +772,25 @@
             overflow: hidden;
         }
 
+        /* --- IMAGES & VIDEOS IN CARDS FIX --- */
+        .event-image img,
+        .event-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.7s ease;
+        }
+
+        .event-card:hover .event-image img,
+        .event-card:hover .event-image video {
+            transform: scale(1.1);
+        }
+
         .event-card.featured .event-image {
             min-height: 450px;
-        }
-
-        .event-image-placeholder {
-            font-size: 5rem;
-            color: rgba(212, 175, 55, 0.15);
-            transition: all 0.5s ease;
-        }
-
-        .event-card:hover .event-image-placeholder {
-            transform: scale(1.1);
-            color: rgba(212, 175, 55, 0.25);
         }
 
         .event-status {
@@ -800,6 +808,7 @@
             font-size: 0.7rem;
             letter-spacing: 2px;
             text-transform: uppercase;
+            z-index: 10;
         }
 
         .event-status .dot {
@@ -827,6 +836,7 @@
             font-size: 0.7rem;
             letter-spacing: 3px;
             font-weight: 600;
+            z-index: 10;
         }
 
         .event-type.presencial {
@@ -1023,7 +1033,7 @@
             font-size: 0.8rem;
         }
 
-        /* Upcoming Events Banner */
+        /* Upcoming Banner (Simple) */
         .upcoming-banner {
             background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(139, 92, 246, 0.1));
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -1453,473 +1463,485 @@
         </button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <video class="hero-video-bg" autoplay muted loop playsinline>
-            <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1764885835/oficialtoth_bm0iun.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        
-        <div class="hero-particles">
-            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-            <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
-            <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
-            <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-            <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
-            <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
-            <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
-        </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <video class="hero-video-bg" autoplay muted loop playsinline poster="https://res.cloudinary.com/dlueoyrhe/image/upload/v1766897115/download_11_jugnev.jpg">
+                <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1764885835/oficialtoth_bm0iun.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-particles">
+                <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+                <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+                <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+                <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+                <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+                <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+                <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+                <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+                <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+            </div>
 
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span class="hero-eyebrow-line"></span>
-                <span class="hero-eyebrow-text">Experiências Transformadoras</span>
-                <span class="hero-eyebrow-line"></span>
-            </div>
-            <h1 class="hero-title">SUPREMACIA</h1>
-            <p class="hero-subtitle">EVENTOS EXCLUSIVOS</p>
-            <p class="hero-description">
-                Imersões presenciais, vivências online e retiros transformadores. 
-                Experiências únicas para despertar seu poder interior e alcançar 
-                a verdadeira supremacia do ser.
-            </p>
-            <div class="hero-cta-group">
-                <a href="#eventos" class="btn-luxury primary">EXPLORAR EVENTOS</a>
-                <a href="#nivel-3" class="btn-luxury secondary">PRÓXIMO RETIRO</a>
-            </div>
-        </div>
-
-        <div class="hero-scroll">
-            <span>SCROLL</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stats-container">
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Vidas Transformadas</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Eventos Realizados</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Satisfação</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Possibilidades</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- NÍVEL 1 - PORTAL DE ANÚBIS -->
-    <section class="section level-section level-anubis" id="nivel-1">
-        <div class="level-badge-container">
-            <div class="level-badge">
-                <i class="fas fa-ankh icon"></i>
-                <span class="text">NÍVEL 1 — PORTAL DE ANÚBIS</span>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2 class="section-title">Eventos <span class="gold">Realizados</span></h2>
-            <p class="section-subtitle">
-                O início da jornada. Eventos que abriram o véu para centenas de iniciados.
-            </p>
-        </div>
-
-        <div class="events-grid single">
-            <!-- Evento Passado -->
-            <div class="event-card past fade-in">
-                <div class="event-image">
-                    <i class="fas fa-door-open event-image-placeholder"></i>
-                    <div class="event-status ended">
-                        <span class="dot"></span>
-                        <span>Encerrado</span>
-                    </div>
-                    <span class="event-type presencial">PRESENCIAL</span>
+            <div class="hero-content">
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-line"></span>
+                    <span class="hero-eyebrow-text">Experiências Transformadoras</span>
+                    <span class="hero-eyebrow-line"></span>
                 </div>
-                <div class="event-content">
-                    <span class="event-category">Evento Inaugural</span>
-                    <h3 class="event-title">AKASHA — O Despertar Inicial</h3>
-                    <p class="event-description">
-                        O evento que deu início a tudo. Uma experiência transformadora que 
-                        marcou o começo da jornada de centenas de pessoas rumo ao despertar.
-                    </p>
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <i class="fas fa-calendar"></i>
-                            <span>Evento Realizado</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-users"></i>
-                            <span>+150 Participantes</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-star"></i>
-                            <span>Avaliação 4.9/5</span>
-                        </div>
-                    </div>
-                    <div class="event-price-row">
-                        <div class="event-price">
-                            <span class="label">Status</span>
-                            <span class="value" style="font-size: 1.2rem; -webkit-text-fill-color: var(--text-muted);">Evento Encerrado</span>
-                        </div>
-                        <a href="#" class="event-btn disabled">ACESSO GRAVAÇÃO</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="upcoming-banner fade-in">
-            <h3>🔮 Aguarde Novos Eventos</h3>
-            <p>Novos eventos do Portal de Anúbis serão anunciados em breve. Inscreva-se na newsletter para ser notificado.</p>
-            <a href="#newsletter" class="btn-luxury secondary">QUERO SER AVISADO</a>
-        </div>
-    </section>
-
-    <!-- NÍVEL 2 - CAMINHO DE HORUS -->
-    <section class="section level-section level-horus" id="nivel-2">
-        <div class="level-badge-container">
-            <div class="level-badge">
-                <i class="fas fa-eye icon"></i>
-                <span class="text">NÍVEL 2 — CAMINHO DE HORUS</span>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2 class="section-title">Eventos <span class="gold">Premium</span></h2>
-            <p class="section-subtitle">
-                Experiências para quem busca ir além. Percepção expandida e clareza absoluta.
-            </p>
-        </div>
-
-        <div class="events-grid double">
-            <!-- Imersão Presencial -->
-            <div class="event-card fade-in">
-                <div class="event-image">
-                    <i class="fas fa-fire event-image-placeholder"></i>
-                    <div class="event-status soon">
-                        <span class="dot"></span>
-                        <span>Vagas Limitadas</span>
-                    </div>
-                    <span class="event-type presencial">PRESENCIAL</span>
-                </div>
-                <div class="event-content">
-                    <span class="event-category">Imersão Intensiva</span>
-                    <h3 class="event-title">Imersão Presencial: Tantra, Akasha e Fascinação</h3>
-                    <p class="event-description">
-                        Uma experiência presencial transformadora de imersão total. 
-                        Práticas avançadas, rituais poderosos e conhecimentos reservados 
-                        para poucos.
-                    </p>
-                    <ul class="event-highlights">
-                        <li><i class="fas fa-check"></i> Práticas Tântricas Avançadas</li>
-                        <li><i class="fas fa-check"></i> Rituais de Magnetismo</li>
-                        <li><i class="fas fa-check"></i> Meditações Guiadas</li>
-                        <li><i class="fas fa-check"></i> Material Exclusivo</li>
-                        <li><i class="fas fa-check"></i> Coffee Break Premium</li>
-                        <li><i class="fas fa-check"></i> Certificado de Participação</li>
-                    </ul>
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <i class="fas fa-clock"></i>
-                            <span>8 horas de imersão</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Local a confirmar</span>
-                        </div>
-                    </div>
-                    <div class="event-price-row">
-                        <div class="event-price">
-                            <span class="label">Investimento</span>
-                            <span class="value">R$ 1.500</span>
-                        </div>
-                        <a href="#" class="event-btn primary">GARANTIR VAGA <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Vivência Online -->
-            <div class="event-card fade-in">
-                <div class="event-image">
-                    <i class="fas fa-satellite-dish event-image-placeholder"></i>
-                    <div class="event-status soon">
-                        <span class="dot"></span>
-                        <span>Em Breve</span>
-                    </div>
-                    <span class="event-type online">AO VIVO</span>
-                </div>
-                <div class="event-content">
-                    <span class="event-category">Vivência Online</span>
-                    <h3 class="event-title">Vivência Akasha Online — Evento Ao Vivo</h3>
-                    <p class="event-description">
-                        A energia da transformação no conforto da sua casa. 
-                        Experiência ao vivo com interação em tempo real e 
-                        práticas guiadas exclusivas.
-                    </p>
-                    <ul class="event-highlights">
-                        <li><i class="fas fa-check"></i> Transmissão HD ao Vivo</li>
-                        <li><i class="fas fa-check"></i> Interação em Tempo Real</li>
-                        <li><i class="fas fa-check"></i> Práticas Guiadas</li>
-                        <li><i class="fas fa-check"></i> Replay por 30 dias</li>
-                        <li><i class="fas fa-check"></i> Material Digital</li>
-                        <li><i class="fas fa-check"></i> Comunidade VIP</li>
-                    </ul>
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <i class="fas fa-clock"></i>
-                            <span>3-4 horas ao vivo</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-laptop"></i>
-                            <span>100% Online</span>
-                        </div>
-                    </div>
-                    <div class="event-price-row">
-                        <div class="event-price">
-                            <span class="label">Investimento</span>
-                            <span class="value">Em breve</span>
-                        </div>
-                        <a href="#newsletter" class="event-btn secondary">LISTA DE ESPERA</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NÍVEL 3 - TEMPLO DE ÍSIS -->
-    <section class="section level-section level-isis" id="nivel-3">
-        <div class="level-badge-container">
-            <div class="level-badge">
-                <i class="fas fa-moon icon"></i>
-                <span class="text">NÍVEL 3 — TEMPLO DE ÍSIS</span>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2 class="section-title">Experiências <span class="gold">Exclusivas</span></h2>
-            <p class="section-subtitle">
-                Os eventos mais transformadores. Reservados para os verdadeiros iniciados.
-            </p>
-        </div>
-
-        <div class="events-grid double">
-            <!-- Akasha Experience -->
-            <div class="event-card fade-in">
-                <div class="event-image">
-                    <i class="fas fa-magic event-image-placeholder"></i>
-                    <div class="event-status soon">
-                        <span class="dot"></span>
-                        <span>Exclusivo</span>
-                    </div>
-                    <span class="event-type hibrido">HÍBRIDO</span>
-                </div>
-                <div class="event-content">
-                    <span class="event-category">Experiência Premium</span>
-                    <h3 class="event-title">AKASHA EXPERIENCE</h3>
-                    <p class="event-description">
-                        Uma jornada completa de transformação. O evento mais 
-                        aguardado do universo Akasha, com experiências que 
-                        transcendem o ordinário.
-                    </p>
-                    <ul class="event-highlights">
-                        <li><i class="fas fa-check"></i> Experiência Multissensorial</li>
-                        <li><i class="fas fa-check"></i> Rituais de Poder</li>
-                        <li><i class="fas fa-check"></i> Mentoria Coletiva</li>
-                        <li><i class="fas fa-check"></i> Networking Elite</li>
-                        <li><i class="fas fa-check"></i> Brindes Exclusivos</li>
-                        <li><i class="fas fa-check"></i> Acesso VIP</li>
-                    </ul>
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <i class="fas fa-calendar"></i>
-                            <span>Data a confirmar</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-gem"></i>
-                            <span>Vagas Ultra-Limitadas</span>
-                        </div>
-                    </div>
-                    <div class="event-price-row">
-                        <div class="event-price">
-                            <span class="label">Investimento</span>
-                            <span class="value">Consultar</span>
-                        </div>
-                        <a href="#newsletter" class="event-btn secondary">INTERESSE <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Retiro Exclusivo - Featured -->
-            <div class="event-card fade-in" style="border-color: rgba(236, 72, 153, 0.3);">
-                <div class="event-image" style="min-height: 400px;">
-                    <i class="fas fa-mountain event-image-placeholder" style="font-size: 6rem;"></i>
-                    <div class="event-status soon">
-                        <span class="dot"></span>
-                        <span>Evento Principal</span>
-                    </div>
-                    <span class="event-type retiro">RETIRO</span>
-                </div>
-                <div class="event-content">
-                    <span class="event-category">Experiência Suprema</span>
-                    <h3 class="event-title">Retiro Exclusivo: Tantra, Fascinação e Poder Pessoal</h3>
-                    <p class="event-description">
-                        O ápice da jornada Akasha. Dias de imersão total em 
-                        um ambiente paradisíaco, longe de tudo, conectando-se 
-                        com sua essência mais profunda e poderosa.
-                    </p>
-                    <ul class="event-highlights">
-                        <li><i class="fas fa-check"></i> 3-5 dias de imersão total</li>
-                        <li><i class="fas fa-check"></i> Hospedagem inclusa</li>
-                        <li><i class="fas fa-check"></i> Alimentação especial</li>
-                        <li><i class="fas fa-check"></i> Práticas ao nascer do sol</li>
-                        <li><i class="fas fa-check"></i> Rituais noturnos</li>
-                        <li><i class="fas fa-check"></i> Cerimônias sagradas</li>
-                        <li><i class="fas fa-check"></i> Mentoria individual</li>
-                        <li><i class="fas fa-check"></i> Kit Ritual exclusivo</li>
-                    </ul>
-                    <div class="event-details">
-                        <div class="event-detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Local paradisíaco</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-users"></i>
-                            <span>Máximo 20 pessoas</span>
-                        </div>
-                        <div class="event-detail">
-                            <i class="fas fa-crown"></i>
-                            <span>Experiência Premium</span>
-                        </div>
-                    </div>
-                    <div class="event-price-row">
-                        <div class="event-price">
-                            <span class="label">Investimento a partir de</span>
-                            <span class="value">R$ 4.997</span>
-                        </div>
-                        <a href="#" class="event-btn primary">RESERVAR VAGA <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NÍVEL 4 - TRONO DE TOTH (Sugestão) -->
-    <section class="section level-section level-toth" id="nivel-4">
-        <div class="level-badge-container">
-            <div class="level-badge">
-                <i class="fas fa-crown icon"></i>
-                <span class="text">NÍVEL 4 — TRONO DE TOTH</span>
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2 class="section-title">Eventos <span class="gold">God-Tier</span></h2>
-            <p class="section-subtitle">
-                O nível supremo. Experiências reservadas aos mestres do destino.
-            </p>
-        </div>
-
-        <div class="events-grid single">
-            <div class="upcoming-banner fade-in" style="border-color: rgba(212, 175, 55, 0.3); background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.02));">
-                <i class="fas fa-lock" style="font-size: 3rem; color: var(--gold-primary); margin-bottom: 20px; opacity: 0.5;"></i>
-                <h3>✦ Acesso Restrito ✦</h3>
-                <p>Eventos do Trono de Toth são exclusivos para membros God-Tier. 
-                   Apenas através de convite ou após completar a jornada dos níveis anteriores.</p>
-                <a href="https://akashahub.github.io/AKASHAHUB/" class="btn-luxury primary">CONHECER A JORNADA</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section" id="depoimentos">
-        <div class="section-header">
-            <div class="section-eyebrow">
-                <span class="section-eyebrow-icon"></span>
-                <span class="section-eyebrow-text">Depoimentos</span>
-                <span class="section-eyebrow-icon"></span>
-            </div>
-            <h2 class="section-title">Transformações <span class="gold">Reais</span></h2>
-            <p class="section-subtitle">O que dizem aqueles que vivenciaram a experiência Akasha</p>
-        </div>
-
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <span class="testimonial-event">IMERSÃO PRESENCIAL</span>
-                <p class="testimonial-text">
-                    "Foi a experiência mais transformadora da minha vida. 
-                    Saí de lá uma pessoa completamente diferente, com uma 
-                    clareza que nunca tive antes."
+                <h1 class="hero-title">SUPREMACIA</h1>
+                <p class="hero-subtitle">EVENTOS EXCLUSIVOS</p>
+                <p class="hero-description">
+                    Imersões presenciais, vivências online e retiros transformadores. 
+                    Experiências únicas para despertar seu poder interior e alcançar 
+                    a verdadeira supremacia do ser.
                 </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">M</div>
-                    <div class="testimonial-info">
-                        <h4>Mariana S.</h4>
-                        <span>Empresária</span>
-                    </div>
+                <div class="hero-cta-group">
+                    <a href="#nivel-2" class="btn-luxury primary">EXPLORAR EVENTOS</a>
+                    <a href="#nivel-3" class="btn-luxury secondary">PRÓXIMO RETIRO</a>
                 </div>
             </div>
 
-            <div class="testimonial-card fade-in">
-                <span class="testimonial-event">VIVÊNCIA ONLINE</span>
-                <p class="testimonial-text">
-                    "Mesmo online, a energia era palpável. As práticas 
-                    mudaram minha rotina e minha forma de ver a vida. 
-                    Gratidão eterna."
-                </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">R</div>
-                    <div class="testimonial-info">
-                        <h4>Ricardo P.</h4>
-                        <span>Executivo</span>
-                    </div>
-                </div>
+            <div class="hero-scroll">
+                <span>SCROLL</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
+        </section>
 
-            <div class="testimonial-card fade-in">
-                <span class="testimonial-event">RETIRO EXCLUSIVO</span>
-                <p class="testimonial-text">
-                    "O retiro foi além de todas as expectativas. Dias de 
-                    pura conexão, insights profundos e uma transformação 
-                    que ainda reverbera em mim."
-                </p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">L</div>
-                    <div class="testimonial-info">
-                        <h4>Luciana M.</h4>
-                        <span>Terapeuta</span>
-                    </div>
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Vidas Transformadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Eventos Realizados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfação</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Possibilidades</div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section" id="newsletter">
-        <div class="newsletter-content">
-            <div class="newsletter-icon">
-                <i class="fas fa-bell"></i>
+        <!-- NÍVEL 1 - PORTAL DE ANÚBIS -->
+        <section class="section level-section level-anubis" id="nivel-1">
+            <div class="level-badge-container">
+                <div class="level-badge">
+                    <i class="fas fa-ankh icon"></i>
+                    <span class="text">NÍVEL 1 — PORTAL DE ANÚBIS</span>
+                </div>
             </div>
-            <h2>Seja Notificado Primeiro</h2>
-            <p>
-                Receba com exclusividade as datas dos próximos eventos, 
-                condições especiais de pré-venda e conteúdos reservados.
-            </p>
-            <form class="newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
-                <button type="submit" class="btn-luxury primary">QUERO ACESSO VIP</button>
-            </form>
-        </div>
-    </section>
+
+            <div class="section-header">
+                <h2 class="section-title">Eventos <span class="gold">Realizados</span></h2>
+                <p class="section-subtitle">
+                    O início da jornada. Eventos que abriram o véu para centenas de iniciados.
+                </p>
+            </div>
+
+            <div class="events-grid single">
+                <!-- Evento Passado: Despertar Inicial -->
+                <div class="event-card past fade-in">
+                    <div class="event-image">
+                        <img src="https://res.cloudinary.com/dlueoyrhe/image/upload/v1766897115/download_11_jugnev.jpg" alt="Akasha O Despertar">
+                        <div class="event-status ended">
+                            <span class="dot"></span>
+                            <span>Encerrado</span>
+                        </div>
+                        <span class="event-type presencial">PRESENCIAL</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Evento Inaugural</span>
+                        <h3 class="event-title">AKASHA — O Despertar Inicial</h3>
+                        <p class="event-description">
+                            O evento que deu início a tudo. Uma experiência transformadora que 
+                            marcou o começo da jornada de centenas de pessoas rumo ao despertar.
+                        </p>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Evento Realizado</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-users"></i>
+                                <span>+150 Participantes</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-star"></i>
+                                <span>Avaliação 4.9/5</span>
+                            </div>
+                        </div>
+                        <div class="event-price-row">
+                            <div class="event-price">
+                                <span class="label">Status</span>
+                                <span class="value" style="font-size: 1.2rem; -webkit-text-fill-color: var(--text-muted);">Evento Encerrado</span>
+                            </div>
+                            <a href="#" class="event-btn disabled">ACESSO GRAVAÇÃO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upcoming-banner fade-in">
+                <h3>🔮 Aguarde Novos Eventos</h3>
+                <p>Novos eventos do Portal de Anúbis serão anunciados em breve. Inscreva-se na newsletter para ser notificado.</p>
+                <a href="#newsletter" class="btn-luxury secondary">QUERO SER AVISADO</a>
+            </div>
+        </section>
+
+        <!-- NÍVEL 2 - CAMINHO DE HORUS -->
+        <section class="section level-section level-horus" id="nivel-2">
+            <div class="level-badge-container">
+                <div class="level-badge">
+                    <i class="fas fa-eye icon"></i>
+                    <span class="text">NÍVEL 2 — CAMINHO DE HORUS</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">Eventos <span class="gold">Premium</span></h2>
+                <p class="section-subtitle">
+                    Experiências para quem busca ir além. Percepção expandida e clareza absoluta.
+                </p>
+            </div>
+
+            <div class="events-grid double">
+                <!-- Imersão Presencial -->
+                <div class="event-card fade-in">
+                    <div class="event-image">
+                        <video autoplay muted loop playsinline poster="https://res.cloudinary.com/dlueoyrhe/image/upload/v1766897115/download_11_jugnev.jpg">
+                            <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1766897064/grok-video-f7744600-188e-4a54-9ef3-7c92b8e6f354-1_uupl8v.mp4" type="video/mp4">
+                        </video>
+                        <div class="event-status soon">
+                            <span class="dot"></span>
+                            <span>Vagas Limitadas</span>
+                        </div>
+                        <span class="event-type presencial">PRESENCIAL</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Imersão Intensiva</span>
+                        <h3 class="event-title">Imersão Presencial: Tantra, Akasha e Fascinação</h3>
+                        <p class="event-description">
+                            Uma experiência presencial transformadora de imersão total. 
+                            Práticas avançadas, rituais poderosos e conhecimentos reservados 
+                            para poucos.
+                        </p>
+                        <ul class="event-highlights">
+                            <li><i class="fas fa-check"></i> Práticas Tântricas Avançadas</li>
+                            <li><i class="fas fa-check"></i> Rituais de Magnetismo</li>
+                            <li><i class="fas fa-check"></i> Meditações Guiadas</li>
+                            <li><i class="fas fa-check"></i> Certificado de Participação</li>
+                        </ul>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>8 horas de imersão</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Local a confirmar</span>
+                            </div>
+                        </div>
+                        <div class="event-price-row">
+                            <div class="event-price">
+                                <span class="label">Investimento</span>
+                                <span class="value">R$ 1.500</span>
+                            </div>
+                            <a href="#" class="event-btn primary">GARANTIR VAGA <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vivência Online -->
+                <div class="event-card fade-in">
+                    <div class="event-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1766897080/grok-video-5be631b8-e7ea-47ad-90cb-d5c3745854d2-5_1_mvj3t9.mp4" type="video/mp4">
+                        </video>
+                        <div class="event-status soon">
+                            <span class="dot"></span>
+                            <span>Em Breve</span>
+                        </div>
+                        <span class="event-type online">AO VIVO</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Vivência Online</span>
+                        <h3 class="event-title">Vivência Akasha Online — Evento Ao Vivo</h3>
+                        <p class="event-description">
+                            A energia da transformação no conforto da sua casa. 
+                            Experiência ao vivo com interação em tempo real e 
+                            práticas guiadas exclusivas.
+                        </p>
+                        <ul class="event-highlights">
+                            <li><i class="fas fa-check"></i> Transmissão HD ao Vivo</li>
+                            <li><i class="fas fa-check"></i> Interação em Tempo Real</li>
+                            <li><i class="fas fa-check"></i> Práticas Guiadas</li>
+                            <li><i class="fas fa-check"></i> Replay por 30 dias</li>
+                        </ul>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <i class="fas fa-clock"></i>
+                                <span>3-4 horas ao vivo</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-laptop"></i>
+                                <span>100% Online</span>
+                            </div>
+                        </div>
+                        <div class="event-price-row">
+                            <div class="event-price">
+                                <span class="label">Investimento</span>
+                                <span class="value">Em breve</span>
+                            </div>
+                            <a href="#newsletter" class="event-btn secondary">LISTA DE ESPERA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÍVEL 3 - TEMPLO DE ÍSIS -->
+        <section class="section level-section level-isis" id="nivel-3">
+            <div class="level-badge-container">
+                <div class="level-badge">
+                    <i class="fas fa-moon icon"></i>
+                    <span class="text">NÍVEL 3 — TEMPLO DE ÍSIS</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">Experiências <span class="gold">Exclusivas</span></h2>
+                <p class="section-subtitle">
+                    Os eventos mais transformadores. Reservados para os verdadeiros iniciados.
+                </p>
+            </div>
+
+            <div class="events-grid double">
+                <!-- Akasha Experience -->
+                <div class="event-card fade-in">
+                    <div class="event-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1766897181/generated_video_3_dg6vi4.mp4" type="video/mp4">
+                        </video>
+                        <div class="event-status soon">
+                            <span class="dot"></span>
+                            <span>Exclusivo</span>
+                        </div>
+                        <span class="event-type hibrido">HÍBRIDO</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Experiência Premium</span>
+                        <h3 class="event-title">AKASHA EXPERIENCE</h3>
+                        <p class="event-description">
+                            Uma jornada completa de transformação. O evento mais 
+                            aguardado do universo Akasha, com experiências que 
+                            transcendem o ordinário.
+                        </p>
+                        <ul class="event-highlights">
+                            <li><i class="fas fa-check"></i> Experiência Multissensorial</li>
+                            <li><i class="fas fa-check"></i> Rituais de Poder</li>
+                            <li><i class="fas fa-check"></i> Mentoria Coletiva</li>
+                            <li><i class="fas fa-check"></i> Acesso VIP</li>
+                        </ul>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Data a confirmar</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-gem"></i>
+                                <span>Vagas Ultra-Limitadas</span>
+                            </div>
+                        </div>
+                        <div class="event-price-row">
+                            <div class="event-price">
+                                <span class="label">Investimento</span>
+                                <span class="value">Consultar</span>
+                            </div>
+                            <a href="#newsletter" class="event-btn secondary">INTERESSE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Retiro Exclusivo - Featured -->
+                <div class="event-card fade-in" style="border-color: rgba(236, 72, 153, 0.3);">
+                    <div class="event-image">
+                        <video autoplay muted loop playsinline>
+                            <source src="https://res.cloudinary.com/dlueoyrhe/video/upload/v1766897065/grok-video-5be631b8-e7ea-47ad-90cb-d5c3745854d2-1_vrvhv2.mp4" type="video/mp4">
+                        </video>
+                        <div class="event-status soon">
+                            <span class="dot"></span>
+                            <span>Evento Principal</span>
+                        </div>
+                        <span class="event-type retiro">RETIRO</span>
+                    </div>
+                    <div class="event-content">
+                        <span class="event-category">Experiência Suprema</span>
+                        <h3 class="event-title">Retiro Exclusivo: Tantra, Fascinação e Poder Pessoal</h3>
+                        <p class="event-description">
+                            O ápice da jornada Akasha. Dias de imersão total em 
+                            um ambiente paradisíaco, longe de tudo, conectando-se 
+                            com sua essência mais profunda e poderosa.
+                        </p>
+                        <ul class="event-highlights">
+                            <li><i class="fas fa-check"></i> 3-5 dias de imersão total</li>
+                            <li><i class="fas fa-check"></i> Hospedagem inclusa</li>
+                            <li><i class="fas fa-check"></i> Alimentação especial</li>
+                            <li><i class="fas fa-check"></i> Rituais noturnos</li>
+                            <li><i class="fas fa-check"></i> Kit Ritual exclusivo</li>
+                        </ul>
+                        <div class="event-details">
+                            <div class="event-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Local paradisíaco</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-users"></i>
+                                <span>Máximo 20 pessoas</span>
+                            </div>
+                            <div class="event-detail">
+                                <i class="fas fa-crown"></i>
+                                <span>Experiência Premium</span>
+                            </div>
+                        </div>
+                        <div class="event-price-row">
+                            <div class="event-price">
+                                <span class="label">Investimento a partir de</span>
+                                <span class="value">R$ 4.997</span>
+                            </div>
+                            <a href="#" class="event-btn primary">RESERVAR VAGA <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÍVEL 4 - TRONO DE TOTH -->
+        <section class="section level-section level-toth" id="nivel-4">
+            <div class="level-badge-container">
+                <div class="level-badge">
+                    <i class="fas fa-crown icon"></i>
+                    <span class="text">NÍVEL 4 — TRONO DE TOTH</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">Eventos <span class="gold">God-Tier</span></h2>
+                <p class="section-subtitle">
+                    O nível supremo. Experiências reservadas aos mestres do destino.
+                </p>
+            </div>
+
+            <div class="events-grid single">
+                <div class="event-card fade-in">
+                    <div class="event-image" style="height: 400px; position: relative;">
+                        <!-- Imagem do God Tier -->
+                        <img src="https://res.cloudinary.com/dlueoyrhe/image/upload/v1766897167/download_34_bbhui4.jpg" alt="God Tier Eventos">
+                        <div class="event-status soon" style="background: rgba(0,0,0,0.8);">
+                            <i class="fas fa-lock" style="margin-right: 5px; color: var(--gold-primary);"></i>
+                            <span>Ultra Restrito</span>
+                        </div>
+                    </div>
+                    <div class="event-content" style="text-align: center; background: linear-gradient(180deg, rgba(18, 18, 26, 0.9), rgba(5, 5, 7, 1)); border-top: 1px solid var(--gold-primary);">
+                        <h3 class="event-title" style="font-size: 2.5rem; margin-bottom: 10px;">✦ ACESSO RESTRITO ✦</h3>
+                        <p class="event-description">
+                           Eventos do Trono de Toth são exclusivos para membros God-Tier. 
+                           Apenas através de convite ou após completar a jornada dos níveis anteriores.
+                        </p>
+                        <a href="https://akashahub.github.io/AKASHAHUB/" class="btn-luxury primary">CONHECER A JORNADA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="depoimentos">
+            <div class="section-header">
+                <div class="section-eyebrow">
+                    <span class="section-eyebrow-icon"></span>
+                    <span class="section-eyebrow-text">Depoimentos</span>
+                    <span class="section-eyebrow-icon"></span>
+                </div>
+                <h2 class="section-title">Transformações <span class="gold">Reais</span></h2>
+                <p class="section-subtitle">O que dizem aqueles que vivenciaram a experiência Akasha</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <span class="testimonial-event">IMERSÃO PRESENCIAL</span>
+                    <p class="testimonial-text">
+                        "Foi a experiência mais transformadora da minha vida. 
+                        Saí de lá uma pessoa completamente diferente, com uma 
+                        clareza que nunca tive antes."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Mariana S.</h4>
+                            <span>Empresária</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <span class="testimonial-event">VIVÊNCIA ONLINE</span>
+                    <p class="testimonial-text">
+                        "Mesmo online, a energia era palpável. As práticas 
+                        mudaram minha rotina e minha forma de ver a vida. 
+                        Gratidão eterna."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-info">
+                            <h4>Ricardo P.</h4>
+                            <span>Executivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <span class="testimonial-event">RETIRO EXCLUSIVO</span>
+                    <p class="testimonial-text">
+                        "O retiro foi além de todas as expectativas. Dias de 
+                        pura conexão, insights profundos e uma transformação 
+                        que ainda reverbera em mim."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">L</div>
+                        <div class="testimonial-info">
+                            <h4>Luciana M.</h4>
+                            <span>Terapeuta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" id="newsletter">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h2>Seja Notificado Primeiro</h2>
+                <p>
+                    Receba com exclusividade as datas dos próximos eventos, 
+                    condições especiais de pré-venda e conteúdos reservados.
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required aria-label="Seu e-mail">
+                    <button type="submit" class="btn-luxury primary">QUERO ACESSO VIP</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1932,10 +1954,10 @@
                     frequência ao mais alto nível.
                 </p>
                 <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -1998,17 +2020,6 @@
             }
         });
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
@@ -2025,21 +2036,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Counter animation for stats
-        const animateCounter = (el, target) => {
-            let current = 0;
-            const increment = target / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    el.textContent = target + '+';
-                    clearInterval(timer);
-                } else {
-                    el.textContent = Math.floor(current) + '+';
-                }
-            }, 30);
-        };
-
         // Parallax effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -2052,5 +2048,4 @@
     </script>
 
 </body>
-
 </html>
